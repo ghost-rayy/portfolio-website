@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="img2.png" style="border-radius: 50%;;" type="image/png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img1.png">
 </head>
 <body>
     <!-- Navigation -->
@@ -261,5 +267,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js');
+        });
+      }
+    </script>
 </body>
 </html>
